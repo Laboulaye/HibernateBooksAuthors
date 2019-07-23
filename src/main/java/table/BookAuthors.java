@@ -12,11 +12,11 @@ public class BookAuthors {
     private int id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "author_id", referencedColumnName = "id")
+    @JoinColumn(name = "book_id", referencedColumnName = "id")
     private Book book;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "book_id", referencedColumnName = "id")
+    @JoinColumn(name = "author_id", referencedColumnName = "id")
     private Author author;
 
     public BookAuthors(){}
