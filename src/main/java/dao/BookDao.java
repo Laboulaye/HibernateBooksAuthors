@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface BookDao {
 
-    public void addBook(Book book) throws SQLException;
-    public void deleteBook(Book book) throws SQLException;
-    public Book getBook(int id) throws SQLException;
-    public List<Book> getBooks() throws SQLException;
+    void addBook(Book book) throws SQLException;
+    void deleteBook(Book book) throws SQLException;
+    Book getBook(int id) throws SQLException;
+    List<Book> getBooks() throws SQLException;
 }

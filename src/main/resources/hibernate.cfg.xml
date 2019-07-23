@@ -12,5 +12,6 @@
         <property name="hibernate.connection.password">pass</property>
 
         <mapping class="table.Book" />
+        <mapping class="table.Author" />
     </session-factory>
 </hibernate-configuration>
