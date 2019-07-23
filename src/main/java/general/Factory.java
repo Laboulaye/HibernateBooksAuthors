@@ -1,8 +1,10 @@
 package general;
 
 import dao.AuthorDao;
+import dao.BookAuthorDao;
 import dao.BookDao;
 import dao.impl.AuthorDaoImpl;
+import dao.impl.BookAuthorDaoImpl;
 import dao.impl.BookDaoImpl;
 
 public class Factory {
@@ -10,6 +12,7 @@ public class Factory {
     private static Factory instance = new Factory();
     private BookDao bookDao;
     private AuthorDao authorDao;
+    private BookAuthorDao bookAuthorDao;
 
     private Factory(){}
 
@@ -29,5 +32,12 @@ public class Factory {
             authorDao= new AuthorDaoImpl();
         }
         return authorDao;
+    }
+
+    public BookAuthorDao getBookAuthorDao(){
+        if(bookAuthorDao == null) {
+            bookAuthorDao = new BookAuthorDaoImpl();
+        }
+        return bookAuthorDao;
     }
 }

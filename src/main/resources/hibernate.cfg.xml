@@ -13,5 +13,6 @@
 
         <mapping class="table.Book" />
         <mapping class="table.Author" />
+        <mapping class="table.BookAuthors" />
     </session-factory>
 </hibernate-configuration>
